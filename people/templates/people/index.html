@@ -1,0 +1,20 @@
+{% extends 'people/style.html' %}
+
+
+{% block title %}
+People
+{% endblock %}
+
+{% block content %}
+{% for i in people %}
+<table width="100%" cellspacing="5" cellpadding="10">
+    <tr>
+        <td width="200" valign="top"><img src={{i.photourl}} alt="альтернативный текст"></td>
+        <td valign="top"><h1><a target="_blank" href="https://vk.com/id{{i.idvk}}">{{i.name}} {{i.lastname}}</a></h1></td>
+    </tr>
+</table>
+
+
+<h3>{{i.dateChange}}</h3>
+{% endfor %}
+{% endblock %}
