@@ -16,4 +16,4 @@ def people_list(request,i,city):
     return render(request,'people/index.html',context={'sity_name':sity_name,'cities':cities,'current_sity':current_sity,'current_sex':current_sex,'sex':sex,'name':name,'people':people})
 
 def people_start(request):
-    return HttpResponseRedirect('http://distaboo.pythonanywhere.com/1/0')
+    return HttpResponseRedirect('/1/0')
