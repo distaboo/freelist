@@ -6,15 +6,29 @@ People
 {% endblock %}
 
 {% block content %}
+<div class="list-group">
+
+
 {% for i in people %}
-<table width="100%" cellspacing="5" cellpadding="10">
-    <tr>
-        <td width="200" valign="top"><img src={{i.photourl}} alt="альтернативный текст"></td>
-        <td valign="top"><h1><a target="_blank" href="https://vk.com/id{{i.idvk}}">{{i.name}} {{i.lastname}}</a></h1></td>
-    </tr>
-</table>
+
+<div  class="card"  flex-direction: 'row' style="width: 40rem;">
+    <div class="row">
+    <div class="col-sm-4" style="background-color:white;">
+      <img class="card-img-top img-circle rounded-circle" src={{i.photourl}} alt="Card image cap" class="round">
+    </div>
+    <div class="col-sm-8" style="background-color:white;">
+    <div class="card-body">
+    <h3 class="card-title"><a target="_blank" href="https://vk.com/id{{i.idvk}}">{{i.name}} {{i.lastname}}</a></h3>
+    <h4 class="card-title">{{i.relation}}</h4>
+    <p class="card-text">{{i.dateChange.day}}.{{i.dateChange.month}}.{{i.dateChange.year}}</p>
+   </div>
+    </div>
+  </div>
 
 
-<h3>{{i.dateChange}}</h3>
+
+</div>
+
 {% endfor %}
+</div>
 {% endblock %}

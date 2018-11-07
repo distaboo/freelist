@@ -25,7 +25,7 @@ SECRET_KEY = 'pr$4forkprs3b)-@&@8)#a^l*@(b@n72uxk+wr$lb(u!6b(!@)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['distaboo.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

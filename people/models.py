@@ -13,7 +13,7 @@ class People(models.Model):
         return '{}'.format(self.id)
 class ChangedPeople(models.Model):
     idvk = models.IntegerField()
-    relation=models.IntegerField()
+    relation=models.CharField(max_length=100)
     lastRelation = models.IntegerField()
     dateChange = models.DateTimeField(auto_now_add=True)
     sex = models.IntegerField()

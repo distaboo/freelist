@@ -20,5 +20,5 @@ from .views import nsk
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('people.urls'))
+    path('', include('people.urls',namespace='people'))
 ]
